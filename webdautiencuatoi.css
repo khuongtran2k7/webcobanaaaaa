@@ -222,3 +222,7 @@ body.trangdichtu {
         border-radius: 0 !important; /* Bỏ bo góc để video sát mép điện thoại */
     }
 }
+.thanhdieuhuong {
+    position: relative !important;
+    z-index: 999999 !important; /* Số càng to nó càng nằm trên cùng */
+}
