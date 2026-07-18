@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trangdichthuat-KĐT</title>
+    <link rel="stylesheet" href="webdautiencuatoi.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body class="trangdichtu">
+    <div id="particles-js"></div>
+    <header class="thanhdieuhuong">
+        <div class="logo">
+            <a href="http://127.0.0.1:5500/webdangtuhoc.html"><span style="color: rgb(124, 38, 38); font-weight: bold;">KĐT</span></a>
+        </div>
+        <nav class="dieuhuong">
+            <a href="https://zim.vn/tong-hop-ngu-phap-tieng-anh-co-ban">ngữ pháp</a>
+            <a href="https://dictionary.cambridge.org/vi/dictionary/english-vietnamese/">TỪ VỰNG</a>
+            <a href="#">LUYỆN NÓI</a>
+            <a href="#">LUYỆN NGHE</a>
+            <a href="dich.html">DỊCH</a>
+        </nav>
+    </header> 
+
+    <div class="tu-dien-mini">
+        <div class="box-nhap">
+            <input type="text" id="input-tu" placeholder="Nhập từ tiếng Anh...">
+            <button onclick="dichTu()">Dịch</button>
+        </div>
+        <div class="box-ket-qua">
+            <p id="ket-qua"></p>
+        </div>
+    </div>
+
+    <div class="cumtong">
+        <h1 id="cumnho1">TỪ ĐỒNG NGHĨA</h1>
+        <!-- KHAY ĐỂ JS ĐỔ KẾT QUẢ VÀO -->
+        <div id="ket-qua-dong-nghia"></div> 
+    </div>
+
+    <!-- CÁC FILE SCRIPT -->
+    <script src="tudongnghia.js"></script>
+    <script src="moi.js"></script>
+</body>
+</html>

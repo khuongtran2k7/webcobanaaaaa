@@ -1,0 +1,224 @@
+/* Đảm bảo video luôn ở dưới cùng và phủ toàn bộ màn hình */
+#video-nen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    
+  
+    transform: translate(-50%, -50%) rotate(-90deg); 
+    
+    width: auto;
+    height: auto;
+    z-index: -1;
+    pointer-events: none;
+}
+/* Đảm bảo body bắt đầu từ trên cùng */
+body {
+    margin: 0;
+    padding: 0;
+    display: block; 
+    min-height: 100vh;
+}
+
+/* Thanh điều hướng */
+.thanhdieuhuong {
+    display: flex;
+    align-items: center; /* Căn giữa các phần tử logo và menu theo chiều ngang */
+    padding: 20px 80px;
+    width: 100%;
+    position: relative; /* Đảm bảo nó nằm trên cùng */
+    top: 0; /* Đẩy sát lên mép trên */
+}
+
+.logo {
+    background-color: black;
+    border: 4px brown solid;
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    color: inherit;
+}
+
+.dieuhuong {
+    display: flex;
+    gap: 30px;
+    margin-left: 200px;
+}
+
+.dieuhuong a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: black;
+    border: 4px brown solid;
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+
+/* Dark mode cho trang dịch thuật */
+body.trangdichtu {
+  background-color: #000;
+  color: #fff;
+}
+body.trangdichtu0 .dieuhuong a {
+    text-decoration: none !important; /* Chỉ xóa gạch chân */
+    border: 4px brown solid !important; /* Đảm bảo viền luôn hiển thị */
+    border-radius: 20px; /* Bo góc như cũ */
+    padding: 10px 15px;
+}
+
+/* 2. Đảm bảo logo cũng không mất viền */
+body.trangdichtu0 .logo {
+    text-decoration: none !important;
+    border: 4px brown solid !important;
+}
+.thanhcongcu {
+  display: flex;
+  justify-content: center; /* căn giữa ngang */
+  align-items: center;     /* căn giữa dọc */
+  height: 60px;
+  background: #333;
+}
+.tu-dien-mini{
+    border-radius:12px;
+    border: 1px solid red;
+    padding :15px;
+    display: inline-block;
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Tạo bóng mờ nhẹ màu trắng */
+
+}
+/* Tùy chỉnh ô nhập liệu */
+#input-tu {
+    padding: 10px;               /* Tạo khoảng trống bên trong ô */
+    border: none;                /* Bỏ viền mặc định xấu xí */
+    border-radius: 5px;          /* Bo tròn góc cho mềm mại */
+    background: #333;            /* Màu nền xám đậm */
+    color: white;                /* Màu chữ trắng */
+    outline: none;               /* Bỏ viền xanh khi click vào */
+}
+
+/* Tùy chỉnh nút Dịch */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #e63946;         /* Màu đỏ nổi bật */
+    color: white;
+    cursor: pointer;             /* Hiện hình bàn tay khi di chuột */
+    font-weight: bold;
+}
+
+.tu-dien-mini {
+    display: flex;         /* Chia đôi theo chiều ngang */
+    gap: 20px;             /* Khoảng cách giữa 2 box */
+    padding: 20px;
+    border: 1px solid red; /* Khung đỏ của bạn */
+    border-radius: 20px;
+}
+
+.box-nhap, .box-ket-qua {
+    flex: 1;               /* Mỗi box chiếm 50% chiều rộng */
+    display: flex;         /* Giúp căn chỉnh các thành phần bên trong */
+    align-items: center;   /* Căn giữa theo chiều dọc */
+}
+
+/* Tùy chỉnh riêng nếu muốn */
+.box-ket-qua {
+    border-left: 1px solid #444; /* Thêm đường kẻ chia cách nếu thích */
+    padding-left: 20px;
+/* Sửa lại CSS để khung bao quanh toàn bộ nội dung */
+}
+.cumtong {
+    border: 2px solid red;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px auto; 
+    
+    /* Dòng này quan trọng: giúp khung tự co giãn theo nội dung bên trong */
+    width: fit-content; 
+    min-width: 300px; /* Độ rộng tối thiểu để không bị quá hẹp */
+    
+    text-align: center;
+    color: white;
+    display: none;
+}
+
+/* Thêm khoảng cách cho danh sách từ bên trong */
+#ket-qua-dong-nghia {
+    margin-top: 15px;
+    line-height: 1.6; /* Giúp các từ cách xa nhau dễ đọc hơn */
+}
+
+#cumnho1 {
+    margin: 0 0 15px 0; /* Chỉ để khoảng cách dưới, không để trên */
+    font-size: 1.8em;
+    border-bottom: 1px solid #555; /* Thêm đường kẻ mảnh dưới tiêu đề nhìn sẽ rất chuyên nghiệp */
+    padding-bottom: 10px;
+}
+.cumtong {
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà */
+}
+
+.cumtong:hover {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3); /* Phát sáng viền đỏ nhẹ */
+    transform: translateY(-5px); /* Khung hơi nhô lên một chút */
+}
+.tu-dien-mini:hover {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3); /* Phát sáng viền đỏ nhẹ */
+    transform: translateY(-5px); /* Khung hơi nhô lên một chút */
+}
+body.trangdichtu {
+    /* Chuyển từ đen sang xám đậm theo đường chéo */
+    background: linear-gradient(135deg, #0f0f0f, #2d1b1b);
+    min-height: 100vh; /* Đảm bảo nền phủ kín trang */
+    margin: 0;
+    color: white;
+}
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000000; /* Nền đen cơ bản */
+    z-index: -1; /* Luôn nằm dưới các khung khác */
+    top: 0;
+    left: 0;
+}
+/* Dành riêng cho điện thoại (màn hình nhỏ hơn 600px) */
+@media screen and (max-width: 600px) {
+    .tu-dien-mini {
+        width: 95%; /* Cho khung chính rộng ra gần hết màn hình */
+        margin: 10px auto;
+    }
+
+    .thanhdieuhuong {
+        flex-direction: column; /* Chuyển menu thành hàng dọc */
+        text-align: center;
+    }
+
+    .dieuhuong a {
+        display: block; /* Mỗi nút menu nằm trên một dòng */
+        margin: 5px 0;
+    }
+
+    .cumtong {
+        width: 90%; /* Khung từ đồng nghĩa cũng co lại cho vừa */
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 600px) {
+    /* Ép container của video xóa bỏ lề để tràn sát mép */
+    .video-container {
+        width: 100% !important; /* !important để đè lên các thiết lập cũ */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 0 !important;
+    }
+
+    .video-container video {
+        width: 100% !important;
+        border-radius: 0 !important; /* Bỏ bo góc để video sát mép điện thoại */
+    }
+}
