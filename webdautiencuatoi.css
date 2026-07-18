@@ -237,6 +237,25 @@ body.trangdichtu {
         border-radius: 0 !important; /* Bỏ bo góc để video sát mép điện thoại */
     }
 }
+/* Áp dụng cho cả điện thoại */
+#video-nen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;       /* Chiếm đúng 100% chiều rộng màn hình */
+    height: 100vh;      /* Chiếm đúng 100% chiều cao màn hình */
+    object-fit: cover;  /* Ép video tràn viền, tự cắt phần thừa để không bị méo */
+    z-index: -1;
+}
+
+/* Đảm bảo body và html luôn chiếm 100% */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Quan trọng: Chặn thanh cuộn trên điện thoại */
+}
 .thanhdieuhuong {
     position: relative !important;
     z-index: 999999 !important; /* Số càng to nó càng nằm trên cùng */
