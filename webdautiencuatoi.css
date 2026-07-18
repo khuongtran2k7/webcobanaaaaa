@@ -1,4 +1,19 @@
-/* Đảm bảo video luôn ở dưới cùng và phủ toàn bộ màn hình */
+
+/* Đưa header lên lớp trên cùng */
+header.thanhdieuhuong {
+    position: relative;
+    z-index: 999999 !important;
+}
+
+/* Đảm bảo particles-js không đè lên header */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Cho nó nằm dưới cùng */
+}/* Đảm bảo video luôn ở dưới cùng và phủ toàn bộ màn hình */
 #video-nen {
     position: fixed;
     top: 50%;
